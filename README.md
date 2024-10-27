@@ -1,24 +1,23 @@
 <p align="center">
-    <a href="https://git.lsat.vn/packages/yii2-otp" target="_blank">
-        <img src="https://lcs.com.vn/img/logo.svg" height="100px">
+    <a href="https://github.com/fat2fast/yii2-otp" target="_blank">
+        <h1 align="center">Fat Too Fast Yii2 OTP</h1>
     </a>
-    <h1 align="center">LSAT Yii2 OTP</h1>
     <br>
 </p>
 
 ### How to install
 
 ```shell
-docker-compose exec api composer require lsat/yii2-otp:~1.0.0
+docker-compose exec api composer require fat2fast/yii2-otp:~1.0.0
 ```
 Or 
 ```shell
-composer require lsat/yii2-otp:~1.0.0 
+composer require fat2fast/yii2-otp:~1.0.0 
 ```
 or Add
 
 ```json
-"lsat/yii2-otp" : "~1.0.0"
+"fat2fast/yii2-otp" : "~1.0.0"
 ```
 to the require section of your application's `composer.json` file.
 
@@ -27,9 +26,9 @@ to the require section of your application's `composer.json` file.
 ```php
 'components' => [
     'otp' => [
-        'class' => lsat\otp\Otp::class,
+        'class' => fat2fast\otp\Otp::class,
         // 'totp' only now
-        'algorithm' => lsat\otp\Otp::ALGORITHM_TOTP,
+        'algorithm' => fat2fast\otp\Otp::ALGORITHM_TOTP,
 
         // length of code
         'digits' => 6,
@@ -38,7 +37,7 @@ to the require section of your application's `composer.json` file.
         'digest' => 'sha1',
 
         // Label of application
-        'label' => '1022_Bình Dương',
+        'label' => 'Label name',
 
         // Uri to image (application icon)
 //            'imgLabelUrl' => \yii\helpers\Url::to('\app\web\logo.php'),
@@ -47,7 +46,7 @@ to the require section of your application's `composer.json` file.
         'secretLength' => 72,
         // Time interval in seconds, must be at least 1
         'interval' => 30,
-        'issuer' => '1022_BD',
+        'issuer' => 'appIssuer',
     ],
 ]
 ```
@@ -60,7 +59,7 @@ Set behavior in model
 
 'behavior' => [
     'otp' => [
-        'class' => lsat\otp\behavior\OtpBehavior::className(),
+        'class' => fat2fast\otp\behavior\OtpBehavior::className(),
         // Component name
         'component' => 'otp',
         
@@ -102,7 +101,7 @@ Read more about QrParams in the [qrcode-library](https://github.com/2amigos/qrco
 ```php
 <?php 
 echo $form->field($model, 'secret')->widget(
-            lsat\otp\widgets\OtpInit::class, [
+            fat2fast\otp\widgets\OtpInit::class, [
             'component' => 'otp',
 
             // link text
