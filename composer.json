@@ -1,0 +1,31 @@
+{
+    "name": "fat2fast/yii2-otp",
+    "description": "Fat Too Fast YII2 extension for generating one time passwords according to RFC 4226/6238 (HOTP/TOTP Algorithm) and authentication widget , Upgrade version lib 2amigos/qrcode-library and spomky-labs/otphp from  https://github.com/sam002/yii2-otp (sam002/yii2-otp) Support PHP to ^8.0",
+    "keywords": ["yii2", "otp", "hotp", "totp", "two-factor authentication", "2FA", "two-factor", "authentication","fat2fast","f2f"],
+    "type": "yii2-extension",
+    "homepage": "https://git.lcsa.vn/packages/yii2-otp",
+    "require": {
+        "php": ">=7.0.0",
+        "spomky-labs/otphp" : "~10.0.0",
+        "2amigos/qrcode-library": "^3.0"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "PhatPhong",
+            "email": "phat.pnh2019@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "lsat\\otp\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
