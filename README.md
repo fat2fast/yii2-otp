@@ -5,6 +5,8 @@
     <br>
 </p>
 
+### Fork from <a href="https://git.lcsa.vn/packages/yii2-otp">Lsat Yii2 OTP</a>
+
 ### How to install
 
 ```shell
@@ -147,5 +149,30 @@ echo $form->field($model, 'secret')->widget(
         ])->label(false); 
 ?>
 ```
+## Development
+config your `composer.json` (Only development)
+```
+"minimum-stability": "dev",
+```
+Add your local path package (Set on top of repositories)
+```
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "modules/yii2-otp"
+        },
+    ]
+}
+```
+And add :
+```
+ "fat2fast/yii2-otp": "dev-main",
+```
+to the require section of your application's `composer.json` file.
 
+Install your local package (Should delete `composer.lock` before if package installed)
+```
+composer require fat2fast/yii2-otp
+```
 
