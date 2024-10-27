@@ -1,6 +1,6 @@
 <?php
 
-namespace lsat\otp\behavior;
+namespace fat2fast\otp\behavior;
 
 use Yii;
 use yii\base\Behavior;

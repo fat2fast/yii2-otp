@@ -1,6 +1,6 @@
 <?php
 
-namespace lsat\otp\helper;
+namespace fat2fast\otp\helper;
 
 use ParagonIE\ConstantTime\Base32;
 use yii\base\Security;

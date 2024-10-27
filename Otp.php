@@ -5,9 +5,9 @@
  * Time: 15:24
  */
 
-namespace lsat\otp;
+namespace fat2fast\otp;
 
-use lsat\otp\helper\OtpHelper;
+use fat2fast\otp\helper\OtpHelper;
 use ParagonIE\ConstantTime\Base32;
 use yii\base\Component;
 use yii\base\InvalidConfigException;

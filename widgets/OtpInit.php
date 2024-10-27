@@ -1,6 +1,6 @@
 <?php
 
-namespace lsat\otp\widgets;
+namespace fat2fast\otp\widgets;
 
 use BaconQrCode\Common\CharacterSetEci;
 use Da\QrCode\Contracts\ErrorCorrectionLevelInterface;
@@ -11,7 +11,7 @@ use Da\QrCode\Writer\EpsWriter;
 use Da\QrCode\Writer\JpgWriter;
 use Da\QrCode\Writer\PngWriter;
 use Da\QrCode\Writer\SvgWriter;
-use lsat\otp\Otp;
+use fat2fast\otp\Otp;
 use Yii;
 use yii\base\Exception;
 use yii\base\InvalidConfigException;
